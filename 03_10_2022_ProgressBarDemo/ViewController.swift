@@ -20,7 +20,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
     
-    let progress = Progress(totalUnitCount: 4)
+    @IBOutlet weak var progressViewLabel: UILabel!
+    
+    let progress = Progress(totalUnitCount: 10)
     var ratio : Float?
     
     override func viewDidLoad() {
@@ -33,7 +35,7 @@ class ViewController: UIViewController {
         loginProgressView.layer.cornerRadius = 6
         
         loginButton.layer.cornerRadius = 7
-        
+        progressViewLabel.isHidden = true
     }
 
     @IBAction func loginButtonClicked(_ sender: Any) {
@@ -44,6 +46,7 @@ class ViewController: UIViewController {
         if(userName != "" && emailId != "" && password != ""){
             loginButton.isHidden = true
             loginProgressView.isHidden = false
+            progressViewLabel.isHidden = false
             
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (timer) in
                 guard self.progress.isFinished == false else{
@@ -54,6 +57,7 @@ class ViewController: UIViewController {
                 self.progress.completedUnitCount += 1
                 let progressFloat = Float(self.progress.fractionCompleted)
                 self.loginProgressView.setProgress(progressFloat, animated: true)
+                self.progressViewLabel.text = String(progressFloat)
             }
         }
     }

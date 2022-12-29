@@ -50,6 +50,13 @@
                                     <action selector="loginButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qTO-Lc-iac"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CV-sM-FZK">
+                                <rect key="frame" x="100" y="465" width="174" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -59,6 +66,7 @@
                         <outlet property="loginButton" destination="59a-L0-jro" id="P1Y-4j-X9N"/>
                         <outlet property="loginProgressView" destination="BJm-6I-Zdc" id="1KI-Mg-VaS"/>
                         <outlet property="passwordTextField" destination="jdn-y0-OuN" id="FRS-fL-VvA"/>
+                        <outlet property="progressViewLabel" destination="3CV-sM-FZK" id="eDr-Ef-mNd"/>
                         <outlet property="userNameTextField" destination="A3A-eL-UmW" id="c9I-g9-KkN"/>
                     </connections>
                 </viewController>
